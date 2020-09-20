@@ -30,7 +30,7 @@ Tschüß, ''' + name + ".")
     else:
         print("Ich verstehe das nicht.")
 
-# Part 2 Das Raumschiff
+# Part 2 Die Kabine
 antwort = ""
 while antwort not in richtung:
     print("Links siehst du ein Alien.")
@@ -54,3 +54,5 @@ links/rechts/vor/zurück\n''')
         quit()
     else:
         print("Ich verstehe das nicht.")
+
+# Part 3 Das Raumschiff
