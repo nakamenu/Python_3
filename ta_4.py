@@ -3,6 +3,7 @@
 # Konfiguration
 ja_nein = ["ja", "nein"]
 richtung = ["links", "rechts", "vor", "zurück"]
+auswahl = ["1", "2", "3", "4", "5"]
 
 # Begrüssung
 print("Bevor wir loslegen, brauchen wir zuerst mal einen Namen für dich.")
@@ -24,8 +25,8 @@ while antwort not in ja_nein:
     if antwort == "ja":
         print("Du verlässt deine Kabine. Du siehst den Mond.")
     elif antwort == "nein":
-        print('''Du bist für dieses Abenteuer nicht bereit.
-Tschüß, ''' + name + ".")
+        print("Du bist für dieses Abenteuer nicht bereit.")
+        print("Tschüß, " + name + ".")
         quit()
     else:
         print("Ich verstehe das nicht.")
@@ -36,9 +37,9 @@ while antwort not in richtung:
     print("Links siehst du ein Alien.")
     print("Rechts befindet sich die Komandozentrale.")
     print("Die Aussenwand des Schiffes befindet sich direkt vor dir.")
-    print("Zurück geht's wieder in die Kabine. \n")
-    antwort = input('''In welche Richtung gehst du?
-links/rechts/vor/zurück\n''')
+    print("Zurück geht's wieder in die Kabine.")
+    print("In welche Richtung gehst du?")
+    antwort = input("links/rechts/vor/zurück\n")
     if antwort == "links":
         print("Das Alien frießt dich. Schade, " + name + ".")
         quit()
@@ -56,3 +57,29 @@ links/rechts/vor/zurück\n''')
         print("Ich verstehe das nicht.")
 
 # Part 3 Das Raumschiff
+antwort = ""
+while antwort not in auswahl:
+    print("Wir schauen uns um und entdecken einen roten Hebel.")
+    print("Darunter sind ein grüner, ein blauer und ein gelber Knopf.")
+    print("Was willst du betätigen? ")
+    print("1 für den roten Hebel.")
+    print("2 für den grünen Knopf.")
+    print("3 für den blauen Knopf.")
+    print("4 für den gelben Knopf.")
+    antwort = input("1, 2, 3 oder 4\n")
+    if antwort == "1":
+        print("Es rumpelt leicht und das Raumschiff landet auf dem Mond.")
+    elif antwort == "2":
+        print("Das Raumschiff fängt feuer und explodiert. Dabei ")
+        print("stirbst du " + name + " und das Abenteuer ist vorbei.")
+        quit()
+    elif antwort == "3":
+        print("Das Raumschiff beschleunigt auf Lichtgeschwindigkeit")
+        print("und du fliegst geradeaus in die Dunkelheit.")
+    elif antwort == "4":
+        print("Du drückst den Knopf aber es passiert nichts.")
+        print("Du hast noch einen Versuch.")
+        print("")
+        antwort = ""
+    else:
+        print("Ich verstehe das nicht.")
